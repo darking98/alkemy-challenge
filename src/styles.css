@@ -1,0 +1,23 @@
+:root{
+    --pink:#F03B7A;
+    --black:#030305;
+    --blue:#14163E;
+    --gray: #747C92;
+    --white:#FAFAFB;
+    --darkest-blue:#131123;
+    --pink-hover:#c93569;
+    --purple:#bb86fc;
+    --darkest-purple:#3700b3;
+    --combat: #f74a23;
+    --durability:#3a72b6;
+    --power:#F9D71C;
+    --green:#3a793a;
+}
+
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  font-family: "aeonik TRIAL";
+}
