@@ -3,14 +3,14 @@ import styled from 'styled-components'
 import {icons} from '../../icons/icons'
 
 const Cards = ({hero, showDetails, addTeam, team, badCounting, goodCounting}) => {
-    const appearance = Object.entries(hero.appearance)
-    const powerStats = Object.values(hero.powerstats)
+    const appearance = Object.entries(hero.appearance) 
+    const powerStats = Object.values(hero.powerstats) 
 
 
     console.log(powerStats)
 
     return (
-        <Container>
+        <Container id="card">
             <CardWrapper>
                 <CardExit
                     onClick={() => showDetails(false)}

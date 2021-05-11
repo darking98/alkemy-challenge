@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import styled from 'styled-components'
 import Cards from './Cards'
+import {Link,animateScroll as scroll} from 'react-scroll'
 
 const Search = ({results, addTeam, team, goodCounting, badCounting}) => {
     
@@ -21,20 +22,17 @@ const Search = ({results, addTeam, team, goodCounting, badCounting}) => {
                         results.map(hero => (
                             <HeroCard>
                                 <h3>{hero.name}</h3>
-                                <div className="algo">
-                                    <img src={hero.image.url} alt="" width="200px" height="250px"/>
-
-                                </div>
+                                <img src={hero.image.url} alt="" width="200px" height="250px"/>
                                 <Button
                                     onClick={() => showCardDetails(hero)}
                                 >
                                     Show Details
                                 </Button>
-
-                                
                             </HeroCard>
                         ))
-                    ) : <span>Search for a hero</span>
+                    ) : <SearchDefault>
+                            <h3>Heros will be here...</h3>
+                        </SearchDefault>
                     
                 }
                 {
@@ -58,6 +56,7 @@ const Container = styled.div`
     display:grid;
     grid-template-columns:150px 1fr 150px;
     margin:30px 0px;
+    position:relative;
 `
 
 const ResultsContainer = styled.div`
@@ -77,12 +76,9 @@ const HeroCard = styled.div`
     background-color: var(--pink);
     border-radius:8px;
 
-    .algo{
         img{
             margin:10px 0px;
-
         }
-    }
     
 `
 
@@ -94,5 +90,10 @@ const Button = styled.button`
     color:white;
     cursor:pointer;
     border-radius:5px;
+`
+
+const SearchDefault = styled.div`
+    grid-column:1 / span 4;
+    color:var(--white);
 `
 export default Search

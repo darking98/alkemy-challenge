@@ -44,9 +44,6 @@ const Home = () => {
             setTeam(team.filter(element => element !== hero))
 
         }
-/*        if(team.includes(hero)){
-            hero.alignment === 'good' ? setGoodCounting(goodCounting - 1) : setBadCounting(badCounting - 1)
-        }*/
         
         
     }
@@ -75,7 +72,7 @@ const Home = () => {
   
 
     return (
-        <HomeContainer>
+        <HomeContainer id="home">
             <Header/>
             <SearchForm>
                 <SearchWrapper>
@@ -126,7 +123,6 @@ const HomeContainer = styled.div`
     flex-direction:column;
     min-height:100vh;
     background-color: var(--darkest-blue);
-    position:relative;
 
 `
 

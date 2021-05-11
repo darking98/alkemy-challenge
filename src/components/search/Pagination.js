@@ -30,7 +30,7 @@ const Pagination = ({ postsPerPage, totalPosts, paginate }) => {
 
 const Container = styled.nav`
     grid-column:2;
-    background-color: var(--white);
+    background-color: var(--darkest-blue);
     ul{
         display:flex;
         justify-content:center;

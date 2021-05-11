@@ -4,11 +4,15 @@ import Cards from './search/Cards'
 
 const Team = ({team}) => {
     return (
-        <Container>
+        <Container id="team">
             Equipo: 
             {
                 team.map(element => (
-                    <span>{element.name}</span>
+                    <div>
+                        <span>{element.name}</span>
+                        <img src={element.image.url} alt=""/>
+                    </div>
+                    
                 ))
             }   
         </Container>

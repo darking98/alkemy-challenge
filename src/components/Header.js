@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { useHistory } from "react-router-dom";
-
+import {Link,animateScroll as scroll} from 'react-scroll'
 
 const Header = () => {
     let history = useHistory();
@@ -17,8 +17,28 @@ const Header = () => {
                 <h2>SuperHero Legends</h2>
             </LogoContainer>
             <NavbarItems>
-                <li><a href="">Home</a></li>
-                <li><a href="">My Team</a></li>
+                <li>
+                    <Link
+                        to="home"
+                        spy={true}
+                        smooth={true}
+                        offset={-100}
+                        duration={500}
+                        >
+                            Home
+                    </Link>
+                </li>
+                <li>
+                    <Link
+                        to="team"
+                        spy={true}
+                        smooth={true}
+                        offset={-100}
+                        duration={500}
+                        >
+                            My Team
+                    </Link>
+                </li>
                 <li
                     onClick={handleLogout}
                 ><a href="#">Logout</a></li>
@@ -54,6 +74,7 @@ const NavbarItems = styled.ul`
         color:var(--white);
         padding:10px 20px;
         a{
+            cursor:pointer;
             text-decoration:none;
             color:var(--white);
         }
