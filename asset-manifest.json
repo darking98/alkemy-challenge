@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/alkemy-challlenge/static/css/main.8f880f0e.chunk.css",
-    "main.js": "/alkemy-challlenge/static/js/main.de47c9e6.chunk.js",
-    "main.js.map": "/alkemy-challlenge/static/js/main.de47c9e6.chunk.js.map",
-    "runtime-main.js": "/alkemy-challlenge/static/js/runtime-main.7f2dd52f.js",
-    "runtime-main.js.map": "/alkemy-challlenge/static/js/runtime-main.7f2dd52f.js.map",
-    "static/js/2.2171aa96.chunk.js": "/alkemy-challlenge/static/js/2.2171aa96.chunk.js",
-    "static/js/2.2171aa96.chunk.js.map": "/alkemy-challlenge/static/js/2.2171aa96.chunk.js.map",
-    "index.html": "/alkemy-challlenge/index.html",
-    "static/css/main.8f880f0e.chunk.css.map": "/alkemy-challlenge/static/css/main.8f880f0e.chunk.css.map",
-    "static/js/2.2171aa96.chunk.js.LICENSE.txt": "/alkemy-challlenge/static/js/2.2171aa96.chunk.js.LICENSE.txt",
-    "static/media/bgc.d3286962.jpg": "/alkemy-challlenge/static/media/bgc.d3286962.jpg",
-    "static/media/screen.510ba44b.png": "/alkemy-challlenge/static/media/screen.510ba44b.png"
+    "main.css": "/alkemy-challenge/static/css/main.8f880f0e.chunk.css",
+    "main.js": "/alkemy-challenge/static/js/main.7fabcbcd.chunk.js",
+    "main.js.map": "/alkemy-challenge/static/js/main.7fabcbcd.chunk.js.map",
+    "runtime-main.js": "/alkemy-challenge/static/js/runtime-main.8bb3885f.js",
+    "runtime-main.js.map": "/alkemy-challenge/static/js/runtime-main.8bb3885f.js.map",
+    "static/js/2.083c719d.chunk.js": "/alkemy-challenge/static/js/2.083c719d.chunk.js",
+    "static/js/2.083c719d.chunk.js.map": "/alkemy-challenge/static/js/2.083c719d.chunk.js.map",
+    "index.html": "/alkemy-challenge/index.html",
+    "static/css/main.8f880f0e.chunk.css.map": "/alkemy-challenge/static/css/main.8f880f0e.chunk.css.map",
+    "static/js/2.083c719d.chunk.js.LICENSE.txt": "/alkemy-challenge/static/js/2.083c719d.chunk.js.LICENSE.txt",
+    "static/media/bgc.d3286962.jpg": "/alkemy-challenge/static/media/bgc.d3286962.jpg",
+    "static/media/screen.510ba44b.png": "/alkemy-challenge/static/media/screen.510ba44b.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.7f2dd52f.js",
-    "static/js/2.2171aa96.chunk.js",
+    "static/js/runtime-main.8bb3885f.js",
+    "static/js/2.083c719d.chunk.js",
     "static/css/main.8f880f0e.chunk.css",
-    "static/js/main.de47c9e6.chunk.js"
+    "static/js/main.7fabcbcd.chunk.js"
   ]
 }
