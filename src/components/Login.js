@@ -12,7 +12,7 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch("https://challenge-react.alkemy.org/", {
+    fetch("http://challenge-react.alkemy.org/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

@@ -53,9 +53,7 @@ const Home = () => {
 
     const paginate = pageNumber => setCurrentPage(pageNumber);
 
-    const handleChange = e =>{
-        setName(e.target.value)
-        setLoading(true);
+    useEffect(() => {
         fetch(`https://superheroapi.com/api.php/10219535131153487/search/${name}`,{
         })
         .then(res => {
@@ -65,7 +63,16 @@ const Home = () => {
             setHeros(data);
             setLoading(false);
             
-        })  
+        })
+        console.log("refreshed")
+        
+    }, [name]);
+
+
+    const handleChange = e =>{
+        setName(e.target.value)
+        setLoading(true);
+        
     }
 
 
@@ -111,6 +118,9 @@ const Home = () => {
             />
             <Team
                 team ={team}
+                setTeam = {setTeam}
+                goodCounting ={setGoodCounting}
+                badCounting = {setBadCounting}
             />
             
         </HomeContainer>
@@ -123,7 +133,6 @@ const HomeContainer = styled.div`
     flex-direction:column;
     min-height:100vh;
     background-color: var(--darkest-blue);
-
 `
 
 const SearchForm = styled.form`

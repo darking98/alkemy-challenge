@@ -23,11 +23,19 @@ const Search = ({results, addTeam, team, goodCounting, badCounting}) => {
                             <HeroCard>
                                 <h3>{hero.name}</h3>
                                 <img src={hero.image.url} alt="" width="200px" height="250px"/>
-                                <Button
-                                    onClick={() => showCardDetails(hero)}
-                                >
-                                    Show Details
-                                </Button>
+                                <Link
+                                    to="center"
+                                    spy={true}
+                                    smooth={true}
+                                    offset={-500}
+                                    duration={500}
+                                    >
+                                        <Button
+                                            onClick={() => showCardDetails(hero)}
+                                        >
+                                            Show Details
+                                        </Button>
+                                </Link>
                             </HeroCard>
                         ))
                     ) : <SearchDefault>
@@ -47,6 +55,8 @@ const Search = ({results, addTeam, team, goodCounting, badCounting}) => {
                         />
                     )
                 }
+
+                <div id="center"/>
             </ResultsContainer>
         </Container>
     )
@@ -65,6 +75,13 @@ const ResultsContainer = styled.div`
     grid-template-columns: repeat(4,1fr);
     gap:20px;
     justify-items:center;
+
+    #center{
+        position:absolute;
+        left:50%;
+        top:50%;
+        color:white;
+    }
 `
 
 const HeroCard = styled.div`

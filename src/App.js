@@ -1,5 +1,5 @@
 import './styles.css'
-import {HashRouter as Router, Switch, Route, Redirect} from 'react-router-dom'
+import {BrowserRouter as Router, Switch, Route, Redirect} from 'react-router-dom'
 import Login from './components/Login'
 import Home from './components/Home'
 
@@ -15,7 +15,7 @@ function App() {
   }
 
   return (
-    <Router basename={process.env.PUBLIC_URL}>
+    <Router>
     <div className="App">
       <Switch>
       <Route exact path="/">

@@ -68,7 +68,12 @@ const Cards = ({hero, showDetails, addTeam, team, badCounting, goodCounting}) =>
                 </AddButton>
                 <Warning>
                     {
-                        goodCounting >= 3 ? 'You already have three Good Heros.' : badCounting >= 3 ? 'You already have three Bad Heroes. ' : ""
+                       hero.biography.alignment === 'good' && goodCounting >= 3 ? 
+                       'You already have three Good Heros.' 
+                       : hero.biography.alignment === 'bad' && badCounting >= 3 ? 
+                       'You already have three Bad Heroes. ' 
+                       : hero.biography.alignment === 'neutral' && 
+                       "You can't add neutral heroes to your team."
                     }
                 </Warning>
             </CardWrapper>
