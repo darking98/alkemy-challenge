@@ -14,7 +14,8 @@
     --green:#3a793a;
 }
 
-
+/* I don't see the aeonik font imported anywhere is it being used? If not should you use another one? */
+/* You can check https://fonts.google.com/ for free fonts to use and maybe get some "inspiration" from https://www.pagecloud.com/blog/best-google-fonts-pairings */
 *{
   margin:0;
   padding:0;

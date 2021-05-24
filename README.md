@@ -1,3 +1,6 @@
+// If I'm not mistaken this is the default README for the create-react-app. I would provide something more meaningful for the context of this repository, maybe add a description
+of the callenge, URLs, how to authenticate, include pics, browserslist (defined in the package.json), links to usefull resources (think of the PDF, hero's API spec) and even a diagram if yoou feeling fancy. I like the idea of having the list of JS commands.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

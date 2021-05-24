@@ -1,9 +1,12 @@
 {
+  "_comment1": "Is the home page accurate? When I navigate I see a blank page",
   "homepage": "http://darking98.github.io/alkemy-challenge",
   "name": "alkemy2",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "_comment1": "Be sure to read about devDependencies so you don't bundle libraries that you don't use in the production package: https://docs.npmjs.com/specifying-dependencies-and-devdependencies-in-a-package-json-file",
+    "_comment2": "Another interesting read would be https://stackabuse.com/caret-vs-tilde-in-package-json/ for managing package dependencies",
     "@testing-library/jest-dom": "^5.12.0",
     "@testing-library/react": "^11.2.6",
     "@testing-library/user-event": "^12.8.3",
