@@ -4,6 +4,7 @@ import styled from 'styled-components'
 
 const Pagination = ({ postsPerPage, totalPosts, paginate }) => {
 
+  // Is this used?
   const [clicked, setClicked] = useState(false)
   const pageNumbers = [];
 

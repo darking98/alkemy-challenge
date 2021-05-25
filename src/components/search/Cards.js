@@ -18,13 +18,19 @@ const Cards = ({hero, showDetails, addTeam, team, badCounting, goodCounting}) =>
                     x
                 </CardExit>
                 <CardName>
+                    // What is this doing?
                     <h2>{hero.name}{Object.values(hero.biography)[0]!== '' ? ` (${Object.values(hero.biography)[0]})` : ""}</h2>
                 </CardName>
                 <CardImage>
+                    // Maybe use styled components for this as well?
                     <img src={hero.image.url} alt="" width="200px" height="250px"/>
                 </CardImage>
                 <CardAppearance>
                     {
+                        // You can use array deconstruct to give a more meaninful name to this if you decide to implement it this way: https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
+                        // Ej: appearance.map([label, value] => ()
+                        // Still seems shady to me, some times you'll need to decide if cleverness and short code is better than more verbose and more self explained one. I tend to favor the later one
+                        // remember that you write code for others, not for yourself. Even if you are the only one that's going to read the code you'll be amazed to know that you won't remember this :D
                         appearance.map(element => (
                             <div>
                                 <h3>{element[0]}: </h3>
@@ -37,6 +43,7 @@ const Cards = ({hero, showDetails, addTeam, team, badCounting, goodCounting}) =>
                 <CardPowerStats>
                     <IconWrapper>
                         {
+                            // As commented in the icons.js file, this seems to be working out of luck. You could add the icon below in the 'powerStats.map' code
                             icons.map(icon =>(
                                 <span>{icon.icon}</span>
                             ))
@@ -52,6 +59,8 @@ const Cards = ({hero, showDetails, addTeam, team, badCounting, goodCounting}) =>
                     </StatsWrapper>
                     
                 </CardPowerStats>
+                // Maybe you could have 3 different classNames for the 'AlignmentWrapper', and pass down hero.biography.alignment as a class so you don't have to do this ternary operator here.
+                // the alignment good would just translate to the css class 'good' that adds the 'var(--green)' and so on.
                 <AlignmentWrapper textColor ={hero.biography.alignment === 'good' ? 'var(--green)' : hero.biography.alignment === 'neutral' ? 'var(--gray)' :'red' }>
                     <p  >
                         {hero.biography.alignment}
@@ -61,6 +70,7 @@ const Cards = ({hero, showDetails, addTeam, team, badCounting, goodCounting}) =>
                     onClick={() => addTeam(hero)}
                 >
                     {
+                        // 6 seems an arbitrary magic number, consider moving it to the constants file as well as MAX_TEAM_SIZE/MAZ_TEAM_MEMBERS or whatever you sit fit best.
                         team.length >= 6 && !team.includes(hero)  ? 'Team is full' 
                         : team.includes(hero) ? 
                         'Delete' : 'Add' 

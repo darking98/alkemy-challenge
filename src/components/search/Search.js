@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import styled from 'styled-components'
 import Cards from './Cards'
+// Is scroll used?
 import {Link,animateScroll as scroll} from 'react-scroll'
 
 const Search = ({results, addTeam, team, goodCounting, badCounting}) => {

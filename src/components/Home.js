@@ -10,18 +10,26 @@ import Pagination from './search/Pagination'
 const Home = () => {
 
     const[name, setName] = useState('')
+    // I see that you use team/heroes exchangeable I would stick to one for consistency
     const[heros, setHeros] = useState([]);
+    // Is this used?
     const [loading,setLoading] = useState(false);
     const [currentPage, setCurrentPage] = useState(1);
+    // Maybe extract the '12' to the constants file?
     const [postsPerPage] = useState(12);
     const [team, setTeam] = useState([]);
+    // I think that you could just infer this from the heros
     const [goodCounting, setGoodCounting] = useState(0)
     const [badCounting, setBadCounting] = useState(0)
 
+    // This seems to handle both add and removal, do you think It would be better to split it?
     const handleAddTeam = (hero) => {
+        // Remove this.
         console.log(goodCounting, badCounting)
         if(!team.includes(hero)){
+            // Why use Object.values(hero) here? What is this doing?
             Object.values(hero).forEach(element => {
+                // Always compare using triple ===. Check: https://bytearcher.com/articles/equality-comparison-operator-javascript/
                 if(element.alignment == "good" && goodCounting < 3){
                     setGoodCounting(goodCounting + 1);
                     setTeam(team.concat(hero));
@@ -64,6 +72,7 @@ const Home = () => {
             setLoading(false);
             
         })
+        // Remove this.
         console.log("refreshed")
         
     }, [name]);

@@ -14,6 +14,7 @@ function App() {
   const AuthenticatedRoute = ({ ...props }) => {
     // 1- From my perspective I like to think about components in terms lightweight objects that merges logic (algorithms) and presentation (UI)
     // I would either use a container or service to hold all logic around user login/session: https://stackoverflow.com/questions/35855781/having-services-in-react-application
+    // this is also true for the code in /components/Login.js
 
     // 2 -What is key? Would a different name reflect what it holds better?
     const isUserAuthenticated = () => localStorage.getItem('key');

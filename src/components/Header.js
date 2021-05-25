@@ -40,6 +40,7 @@ const Header = () => {
                     </Link>
                 </li>
                 <li
+                // I would move the onClick to the anchor
                     onClick={handleLogout}
                 ><a href="#">Logout</a></li>
             </NavbarItems>

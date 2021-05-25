@@ -32,6 +32,7 @@ const Login = () => {
         } else {
           setError(data.error);
         }
+        // I would remove this
         console.log(data);
       });
   };

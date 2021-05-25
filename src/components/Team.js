@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import styled from 'styled-components'
+// Is this used?
 import Cards from './search/Cards'
 
 const Team = ({team, setTeam, goodCounting, badCounting}) => {
@@ -7,6 +8,7 @@ const Team = ({team, setTeam, goodCounting, badCounting}) => {
 
     const heroes = [...team]
 
+    // Remove this
     console.log(heroes)
     const [combat, setCombat] = useState(0);
     const [durability, setDurability] = useState(0);
@@ -14,16 +16,19 @@ const Team = ({team, setTeam, goodCounting, badCounting}) => {
     const [power, setPower] = useState(0);
     const [speed,setSpeed] = useState(0);
     const [strength, setStrength] = useState(0);
+    // Is this used?
     const [height, setHeight] = useState(0);
     const [weight, setWeight] = useState(0);
     
     const handleRemoveTeam = (hero_) => {
+        // If this component only handles the removal of a hero, would you think it's better to provide a removeHero instead of setTeam in the props?
         setTeam(team => team.filter((hero) => hero_ != hero))
         hero_.biography.alignment === 'good' ? goodCounting(counting => counting -1) : badCounting(counting => counting -1);
     }
 
     useEffect(() => {
 
+        // Remove this
         console.log(JSON.stringify(heroes[1]))
         heroes.forEach(element => {
             Object.values(element.powerstats).forEach(stat => {
@@ -48,12 +53,15 @@ const Team = ({team, setTeam, goodCounting, badCounting}) => {
         
     }, [team])
 
+
+    // The content of HerosGoodWrapper and HerosBadWrapper seems the same, how can you refactor this to remove duplicated code?
     return (
         <Container id="team">
             <Header>
                 My Team
             </Header>
             <HerosWrapper>
+                
                 <HerosGoodWrapper>                 
                     {
                         team.map(element => (
@@ -110,6 +118,8 @@ const Team = ({team, setTeam, goodCounting, badCounting}) => {
     )
 }
 
+// It's a common practice to move this to a different file, check: https://blog.cloudboost.io/separate-your-code-with-styled-components-ec4fd1ee3ef8
+
 const Container = styled.div`
     width:100%;
     min-height:600px;
@@ -153,6 +163,8 @@ const HeroCard = styled.div`
     display:flex;
     align-items:center;
     flex-direction:column;
+    // This is more of a personal preference, but possitive comparsions come more naturally to me. 
+    // https://softwareengineering.stackexchange.com/questions/350472/developer-insists-if-statements-shouldnt-have-negated-conditions-and-should-al
     border:${props => props.alignment != 'bad' ? '1px solid green' : '1px solid red'};
     margin:0px 20px;
 
@@ -190,6 +202,7 @@ margin-bottom:10px;
     left:0;
     z-index:100;    
     background:red;
+    // I woul rename 'widthBar' to something more aligned to what it represents, maybe statPercentage/statValue are some ideas?
     width:${props => props.widthBar};
 }
 
