@@ -18,11 +18,11 @@ const Home = () => {
     // Maybe extract the '12' to the constants file?
     const [postsPerPage] = useState(12);
     const [team, setTeam] = useState([]);
-    // I think that you could just infer this from the heros
+    // I think that you could just infer this from the heros (no need to store it as a separate value in the state)
     const [goodCounting, setGoodCounting] = useState(0)
     const [badCounting, setBadCounting] = useState(0)
 
-    // This seems to handle both add and removal, do you think It would be better to split it?
+    // This seems to handle both add and removal, do you think It would be better to split it? Also are you adding a team or a team member? :)
     const handleAddTeam = (hero) => {
         // Remove this.
         console.log(goodCounting, badCounting)
