@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import styled from "styled-components";
-import bgcLeft from "../images/bgc.jpg";
-import background from "../images/screen.png";
+import background from "../assets/images/bgc.jpg";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -32,13 +31,12 @@ const Login = () => {
         } else {
           setError(data.error);
         }
-        console.log(data);
       });
-  };
+  }
 
   return (
     <Container background={background}>
-      <LoginForm onSubmit={handleSubmit} background={bgcLeft}>
+      <LoginForm onSubmit={handleSubmit} background={background}>
         <LogoContainer>
           <h1>SuperHero Legends</h1>
         </LogoContainer>
@@ -63,7 +61,7 @@ const Login = () => {
         <span>{error}</span>
         <Button type="submit">Login</Button>
       </LoginForm>
-    </Container>
+  </Container>
   );
 };
 
@@ -92,6 +90,17 @@ const LoginForm = styled.form`
   box-shadow: 0px 8px 15px 0px #000000;
   border-radius: 15px;
   background-repeat: no-repeat;
+  text-align: center;
+
+  span{
+    color:red;
+  }
+
+  @media (max-width:600px){
+    width:300px;
+    height:500px;
+    padding:50px;
+  }
 `;
 
 const InputContainer = styled.div`
@@ -102,69 +111,36 @@ const InputContainer = styled.div`
     border-radius: 10px;
     border: none;
     outline: none;
-    :focus {
-      border: 1px solid var(--pink);
-    }
   }
 `
 
 const LogoContainer = styled.div`
+  text-align: center;
+  color:var(--white);
 `
 
 const HeaderContainer = styled.div`
   display: flex;
   justify-content: center;
-  padding: 20px;
   h2 {
-    color: var(--pink);
+    padding: 20px;
+    border-radius: 10px;
+    color: var(--white);
     font-size: 23px;
     letter-spacing: 1px;
   }
 `;
 
-const ImageContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  grid-column: 1;
-  grid-row: 1;
-  background: url(${(props) => props.background});
-  background-position: center center;
-  background-size: cover;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-  box-shadow: 0px 8px 15px 0px #000000;
-`;
-
-const TextLogin = styled.div`
-  color: var(--white);
-  text-align: center;
-  width: 80%;
-  h2 {
-    margin: 10px 0px;
-    font-size: 30px;
-    text-shadow: 0px 0px 10px var(--black);
-  }
-
-  p {
-    font-size: 20px;
-    text-shadow: 0px 0px 10px var(--black);
-  }
-`;
 
 const Button = styled.button`
   width: 100%;
-  background-color: var(--pink);
+  background-color: var(--orange);
   padding: 10px;
   border: none;
   border-radius: 10px;
   color: var(--white);
   transition: 300ms ease-in-out;
   cursor: pointer;
-  :hover {
-    background: var(--pink-hover);
-  }
 `;
 
 export default Login;

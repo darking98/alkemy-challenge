@@ -4,7 +4,6 @@ import styled from 'styled-components'
 
 const Pagination = ({ postsPerPage, totalPosts, paginate }) => {
 
-  const [clicked, setClicked] = useState(false)
   const pageNumbers = [];
 
   for (let i = 1; i <= Math.ceil(totalPosts / postsPerPage); i++) {
@@ -40,7 +39,7 @@ const Container = styled.nav`
             padding:20px;
 
             a{
-                color:var(--pink);
+                color:var(--orange);
                 font-weight:800;
                 text-decoration:none;
             }

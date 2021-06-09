@@ -1,9 +1,9 @@
 import React, {useState} from 'react'
 import styled from 'styled-components'
 import Cards from './Cards'
-import {Link,animateScroll as scroll} from 'react-scroll'
+import {Link} from 'react-scroll'
 
-const Search = ({results, addTeam, team, goodCounting, badCounting}) => {
+const Search = ({results, addTeam, team, goodCounting, badCounting, powerStatsIcons}) => {
     
     const [showDetails, setShowDetails] = useState(false);
     const[cardDetails, setcardDetails] = useState([]);
@@ -52,6 +52,7 @@ const Search = ({results, addTeam, team, goodCounting, badCounting}) => {
                             team = {team}
                             goodCounting ={goodCounting}
                             badCounting = {badCounting}
+                            powerStatsIcons={powerStatsIcons}
                         />
                     )
                 }
@@ -67,6 +68,10 @@ const Container = styled.div`
     grid-template-columns:150px 1fr 150px;
     margin:30px 0px;
     position:relative;
+
+    @media (max-width:600px){
+        display: block;
+    }
 `
 
 const ResultsContainer = styled.div`
@@ -82,6 +87,16 @@ const ResultsContainer = styled.div`
         top:50%;
         color:white;
     }
+
+    @media (max-width:1024px){
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    @media (max-width:600px){
+        display: flex;
+        flex-direction: column;
+        padding:0px 30px;
+    }
 `
 
 const HeroCard = styled.div`
@@ -89,21 +104,24 @@ const HeroCard = styled.div`
     flex-direction:column;
     align-items:center;
     padding:30px;
-    border:4px solid var(--pink-hover);
-    background-color: var(--pink);
+    background-color: var(--black);
     border-radius:8px;
+    color:var(--white);
 
         img{
             margin:10px 0px;
         }
     
+    @media (max-width:600px){
+        padding:30px;
+    }
 `
 
 const Button = styled.button`
     padding:10px 30px;
     outline:none;
     border:none;
-    background-color: var(--darkest-blue);
+    background-color: var(--orange);
     color:white;
     cursor:pointer;
     border-radius:5px;
@@ -112,5 +130,6 @@ const Button = styled.button`
 const SearchDefault = styled.div`
     grid-column:1 / span 4;
     color:var(--white);
+    text-align: center;
 `
 export default Search

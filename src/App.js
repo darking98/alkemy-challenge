@@ -18,11 +18,14 @@ function App() {
     <Router>
     <div className="App">
       <Switch>
-      <Route exact path="/">
-        <Redirect to="/home" />
-      </Route>
+        <Route exact path="/">
+          <Redirect to={"/home"} />
+        </Route>
         <Route path="/login" component ={Login}/>
         <AuthenticatedRoute path ="/home" component ={Home}/>
+        <Route path="*">
+          <Redirect to ={"/home"}/>
+        </Route>
       </Switch>
     </div>
   </Router>

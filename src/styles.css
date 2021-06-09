@@ -1,23 +1,22 @@
 :root{
-    --pink:#F03B7A;
-    --black:#030305;
+    --black: #040304;
     --blue:#14163E;
     --gray: #747C92;
     --white:#FAFAFB;
     --darkest-blue:#131123;
-    --pink-hover:#c93569;
-    --purple:#bb86fc;
-    --darkest-purple:#3700b3;
-    --combat: #f74a23;
-    --durability:#3a72b6;
-    --power:#F9D71C;
-    --green:#3a793a;
+    --orange:#A13B26;
+    --lightest-black:#14141c;
+    --menu-color:rgba(19, 17, 34, 0.95);
 }
 
+@font-face {
+  font-family: 'aeonik';
+  src: url(./assets/fonts/AeonikTRIAL-Regular.otf);
+}
 
 *{
   margin:0;
   padding:0;
   box-sizing: border-box;
-  font-family: "aeonik TRIAL";
+  font-family: "aeonik",sans-serif;
 }
