@@ -11,7 +11,7 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch("http://challenge-react.alkemy.org/", {
+    fetch("https://cors-anywhere.herokuapp.com/http://challenge-react.alkemy.org/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
